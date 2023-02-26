@@ -1,9 +1,13 @@
 package commandrequestpattern;
 
 public class OrderHandler {
-	
-	public void invoke() {
-		
+		String objectName;
+	public OrderHandler(String objectName) {
+		this.objectName = objectName;
+	}
+
+	public void invoke(Command command) {
+		command.execute();
 	}
 
 }
